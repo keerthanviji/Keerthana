@@ -1,23 +1,27 @@
 #prgm for no.of words and characters in total with time parsing
 
+
 from datetime import datetime
 start_time = datetime.now()
-text = open("olsample.txt","r")
-num_words = 0
+file_txt = open("sample.txt","r")                  # enter the name of the text file in place of sample 
+num_words = 0	                                	# initialising variables to 0 
 
-for line in text:
+for line in file_txt:                              # reading text character by character
     words = line.split()
     num_words += len(words)
     
 print('num_words' , num_words )
-    
-char = 0		# initialising variables to 0 
+file_txt = open("sample.txt","r")                  # enter the name of the text file in place of sample 
+text = file_txt.read()	
+
+char = 0	                                    	# initialising variables to 0 
  
-for i in text:					# reading text character by character
+for i in text:				                      	# reading text character by character
 	
       if(i != " "):  
         if(i != "\n"):
             char += 1
+
 print('num_characters', char) 
    
 print ('\n')    
